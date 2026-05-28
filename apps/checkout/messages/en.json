@@ -1,0 +1,8 @@
+{
+  "common": {
+    "appName": "Payins",
+    "loading": "Loading…",
+    "retry": "Retry",
+    "cancel": "Cancel"
+  }
+}

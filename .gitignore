@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+.next/
+out/
+.turbo/
+
+# Tests
+coverage/
+
+# Env (each app may also have its own .env.example tracked)
+.env
+.env.local
+.env.*.local
+
+# Editor / OS
+.DS_Store
+*.log
+
+# Vercel
+.vercel

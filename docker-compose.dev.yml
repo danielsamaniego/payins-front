@@ -1,0 +1,47 @@
+# Kunfupay-Payins-Front — Both Next.js apps with hot reload.
+# Assumes the back is already reachable at host.docker.internal:1464 (e.g. via the
+# back repo's `pnpm docker:up` / `pnpm dev` / `pnpm docker:dev`). The container itself
+# does NOT bring up Postgres or the back.
+#
+# Single command: `pnpm docker:dev` (= `docker compose -f docker-compose.dev.yml up --build`).
+
+name: payins-front-dev
+
+services:
+  checkout:
+    build:
+      context: .
+      dockerfile: apps/checkout/Dockerfile.dev
+    ports:
+      - "1466:1466"
+    volumes:
+      - ./apps/checkout/src:/workspace/apps/checkout/src
+      - ./apps/checkout/messages:/workspace/apps/checkout/messages
+      - ./apps/checkout/public:/workspace/apps/checkout/public
+    environment:
+      # Browser-visible: payer's browser hits localhost (host port mapping of the back).
+      NEXT_PUBLIC_PAYINS_API_URL: http://localhost:1464
+      # Server-visible (RSC, server actions): container reaches the host via the
+      # Docker Desktop gateway. On Linux the `extra_hosts` entry below makes it work too.
+      PAYINS_API_INTERNAL_URL: http://host.docker.internal:1464
+      NODE_ENV: development
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: apps/dashboard/Dockerfile.dev
+    ports:
+      - "1467:1467"
+    volumes:
+      - ./apps/dashboard/src:/workspace/apps/dashboard/src
+      - ./apps/dashboard/messages:/workspace/apps/dashboard/messages
+      - ./apps/dashboard/public:/workspace/apps/dashboard/public
+    environment:
+      NEXT_PUBLIC_PAYINS_API_URL: http://localhost:1464
+      PAYINS_API_INTERNAL_URL: http://host.docker.internal:1464
+      SESSION_SECRET: dev-secret-change-me
+      NODE_ENV: development
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

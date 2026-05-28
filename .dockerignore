@@ -1,0 +1,20 @@
+# Keep the build context small: exclude generated/runtime stuff. Docker reads this
+# whenever the build context is the workspace root (back/Dockerfile{,.dev}).
+**/node_modules
+**/dist
+**/.next
+**/.turbo
+**/coverage
+**/.git
+**/.DS_Store
+**/.vercel
+**/.idea
+**/.vscode
+
+# App-side artefacts that aren't needed in any image
+back/test
+back/tests
+**/*.log
+**/.env
+**/.env.local
+**/.env.*.local
