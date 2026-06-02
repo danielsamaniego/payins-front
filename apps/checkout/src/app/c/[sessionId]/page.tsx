@@ -6,7 +6,7 @@
  * not `pages/` — `pages/` here is the FSD layer that holds the actual
  * composition. See `docs/frontend-architecture.md` § 5.4.
  */
-import { CheckoutPage } from "@/pages/checkout-page";
+import { CheckoutPage } from "@/views/checkout-page";
 
 export default async function CheckoutRoute({
   params,
