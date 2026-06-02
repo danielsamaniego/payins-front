@@ -4,5 +4,68 @@
     "loading": "Loading…",
     "retry": "Retry",
     "cancel": "Cancel"
+  },
+  "checkout": {
+    "page": {
+      "title": "Confirm your payment",
+      "poweredBy": "Processed securely by Payins.",
+      "notFoundTitle": "This session doesn't exist",
+      "notFoundBody": "The link you opened doesn't match any active payment session. If you arrived here from an email or a message, go back and try again.",
+      "expiredTitle": "This session expired",
+      "expiredBody": "The window to complete this payment has closed. Ask the merchant for a new link.",
+      "status": {
+        "COMPLETED": {
+          "title": "Payment completed",
+          "body": "This session has already been charged. If you think that's a mistake, contact the merchant."
+        },
+        "EXPIRED": {
+          "title": "Session expired",
+          "body": "The window to complete this payment has closed."
+        },
+        "CANCELED": {
+          "title": "Session canceled",
+          "body": "The merchant canceled this payment session."
+        }
+      }
+    },
+    "summary": {
+      "title": "Summary",
+      "itemLabel": "Item",
+      "amountLabel": "Total",
+      "countryLabel": "Country"
+    },
+    "methods": {
+      "title": "Payment method",
+      "noneAvailable": "No payment methods are available for this session. Contact the merchant.",
+      "flowNotImplemented": "The {flow} flow is not available in this checkout yet.",
+      "slug": {
+        "card": "Card",
+        "apple_pay": "Apple Pay",
+        "google_pay": "Google Pay",
+        "yape": "Yape",
+        "nequi": "Nequi",
+        "plin": "PLIN",
+        "pix": "Pix",
+        "pse": "PSE",
+        "boleto": "Boleto",
+        "oxxo": "OXXO",
+        "bank_transfer": "Bank transfer",
+        "mercadopago_wallet": "Mercado Pago",
+        "paypal": "PayPal",
+        "crypto": "Crypto"
+      }
+    },
+    "redirect": {
+      "submit": "Continue to secure payment",
+      "submitting": "Redirecting…",
+      "redirectHint": "We'll send you to the provider's secure page to complete the charge."
+    },
+    "buyerFields": {
+      "EMAIL": "Email",
+      "GIVEN_NAME": "First name",
+      "FAMILY_NAME": "Last name",
+      "DOCUMENT_NUMBER": "ID document",
+      "PHONE_E164": "Phone"
+    }
   }
 }

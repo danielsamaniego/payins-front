@@ -27,7 +27,9 @@ export function applyBasisPoints(amount: AmountMinor, bps: BasisPoints): AmountM
 export function formatMinor(amount: AmountMinor, minorUnits: number): string {
   if (minorUnits <= 0) return String(amount);
   const sign = amount < 0 ? "-" : "";
-  const digits = Math.abs(amount).toString().padStart(minorUnits + 1, "0");
+  const digits = Math.abs(amount)
+    .toString()
+    .padStart(minorUnits + 1, "0");
   const integerPart = digits.slice(0, digits.length - minorUnits);
   const fractionPart = digits.slice(digits.length - minorUnits);
   return `${sign}${integerPart}.${fractionPart}`;

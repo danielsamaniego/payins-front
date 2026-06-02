@@ -4,5 +4,68 @@
     "loading": "Cargando…",
     "retry": "Reintentar",
     "cancel": "Cancelar"
+  },
+  "checkout": {
+    "page": {
+      "title": "Confirma tu pago",
+      "poweredBy": "Procesado de forma segura por Payins.",
+      "notFoundTitle": "Esta sesión no existe",
+      "notFoundBody": "El enlace que abriste no corresponde a ninguna sesión de pago. Si llegaste aquí desde un correo o un mensaje, vuelve al origen y prueba de nuevo.",
+      "expiredTitle": "Esta sesión expiró",
+      "expiredBody": "El plazo para completar este pago terminó. Pide al comercio un nuevo enlace.",
+      "status": {
+        "COMPLETED": {
+          "title": "Pago completado",
+          "body": "Esta sesión ya fue cobrada. Si crees que es un error, contacta al comercio."
+        },
+        "EXPIRED": {
+          "title": "Sesión expirada",
+          "body": "El plazo para completar este pago terminó."
+        },
+        "CANCELED": {
+          "title": "Sesión cancelada",
+          "body": "El comercio canceló esta sesión de pago."
+        }
+      }
+    },
+    "summary": {
+      "title": "Resumen",
+      "itemLabel": "Concepto",
+      "amountLabel": "Total",
+      "countryLabel": "País"
+    },
+    "methods": {
+      "title": "Método de pago",
+      "noneAvailable": "No hay métodos disponibles para esta sesión. Contacta al comercio.",
+      "flowNotImplemented": "El flujo {flow} aún no está disponible en este checkout.",
+      "slug": {
+        "card": "Tarjeta",
+        "apple_pay": "Apple Pay",
+        "google_pay": "Google Pay",
+        "yape": "Yape",
+        "nequi": "Nequi",
+        "plin": "PLIN",
+        "pix": "Pix",
+        "pse": "PSE",
+        "boleto": "Boleto",
+        "oxxo": "OXXO",
+        "bank_transfer": "Transferencia bancaria",
+        "mercadopago_wallet": "Mercado Pago",
+        "paypal": "PayPal",
+        "crypto": "Cripto"
+      }
+    },
+    "redirect": {
+      "submit": "Continuar al pago seguro",
+      "submitting": "Redirigiendo…",
+      "redirectHint": "Te enviaremos a la página segura del proveedor para terminar el cobro."
+    },
+    "buyerFields": {
+      "EMAIL": "Correo electrónico",
+      "GIVEN_NAME": "Nombre",
+      "FAMILY_NAME": "Apellido",
+      "DOCUMENT_NUMBER": "Documento de identidad",
+      "PHONE_E164": "Teléfono"
+    }
   }
 }
